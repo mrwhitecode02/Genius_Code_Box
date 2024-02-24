@@ -1,0 +1,158 @@
+/* Start Line */
+
+/* 
+By tag name 
+*/
+
+body {
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: black;
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+By class
+*/
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(22, 45, 101, 1);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.testimonials {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 740px;
+    margin: 20px;
+    box-shadow: 0 6px 5px -7px #cbcbcb;
+    border-radius: 3px;
+    position: relative;
+    opacity: 0;
+    animation: showTestimonials 0.32s 0.78s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    input {
+        display: none;
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
+@keyframes showTestimonials {
+    to {
+        opacity: 1;
+    }
+} 
+
+.testimonials-inner {
+    position: relative;
+    min-height: 100px;
+}
+
+.testimonial {
+    padding: 40px 34px 20px 34px;
+    margin: 0 30px;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+}
+
+input[name="testimonial"]:nth-child(1):checked~.testimonials-inner .testimonial:nth-child(1),
+input[name="testimonial"]:nth-child(2):checked~.testimonials-inner .testimonial:nth-child(2),
+input[name="testimonial"]:nth-child(3):checked~.testimonials-inner .testimonial:nth-child(3),
+input[name="testimonial"]:nth-child(4):checked~.testimonials-inner .testimonial:nth-child(4) {
+    pointer-events: initial;
+}
+
+.testimonial {
+    transition: 0.72s cubic-bezier(0.215, 0.610, 0.355, 1),opacity 0.32s 0.12s;
+    opacity: 0;
+    transform: translate(0, 38px);
+    max-height: 80px;
+    animation: hideTestimonial 0s 0.52s forwards;
+    position: relative;
+}
+
+input[name="testimonial"]:nth-child(1):checked~.testimonials-inner .testimonial:nth-child(1),
+input[name="testimonial"]:nth-child(2):checked~.testimonials-inner .testimonial:nth-child(2),
+input[name="testimonial"]:nth-child(3):checked~.testimonials-inner .testimonial:nth-child(3),
+input[name="testimonial"]:nth-child(4):checked~.testimonials-inner .testimonial:nth-child(4) {
+    animation: showTestimonial 0s 0.72s forwards;
+    position: absolute;
+    opacity: 1;
+    transform: none;
+    max-height: 500px;
+    transition: 0.3s 0.52s, opacity 0.68s 0.92s, max-height 0.82s 0.72s;
+}
+
+@keyframes hideTestimonial {
+    to {
+        position: absolute;
+    }
+}
+
+@keyframes showTestimonial {
+    to {
+        position: relative;
+    }
+}
+
+input[name="testimonial"]:nth-child(1):checked~.testimonials-inner .testimonial:nth-child(1),
+input[name="testimonial"]:nth-child(2):checked~.testimonials-inner .testimonial:nth-child(2),
+input[name="testimonial"]:nth-child(3):checked~.testimonials-inner .testimonial:nth-child(3),
+input[name="testimonial"]:nth-child(4):checked~.testimonials-inner .testimonial:nth-child(4) {
+    background-color: rgba(245, 34, 34, 0.836);
+    transform: scale(1);
+    transition: transform 0.36s cubic-bezier(0.26, -0.59, 0.43, 2.48), background-color 0.41s ease-in;
+}
+
+.testimonial-photo {
+    height: 84px;
+    width: 84px;
+    position: absolute;
+    top: -32px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.photo-background {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    height: 100%;
+    box-shadow: 0 -4px 3px -2px #c3c2c2;
+    width: 100%;
+    transform: scale(0.87);
+    transition: 0.32s;
+}
+
+
+input[name="testimonial"]:nth-child(1):checked~.testimonials-inner .testimonial:nth-child(1),
+input[name="testimonial"]:nth-child(2):checked~.testimonials-inner .testimonial:nth-child(2),
+input[name="testimonial"]:nth-child(3):checked~.testimonials-inner .testimonial:nth-child(3),
+input[name="testimonial"]:nth-child(4):checked~.testimonials-inner .testimonial:nth-child(4) {
+    transform: scale(1);
+    transition: 0s;
+}
+
+
+
+
