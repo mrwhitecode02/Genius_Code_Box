@@ -1,0 +1,74 @@
+:root {
+    --background: #060D23;
+    --instagram: rgba(255, 201, 0, 1);
+    --linkedIn: rgba(10, 102, 194, 1);
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.social-media-btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.social-media-btn {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    outline: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.social-media-btn:hover {
+    outline-offset: 3px;
+    transition: all 0.3s;
+}
+
+.social-media-btn i {
+    transition: all 0.3s;
+}
+
+.social-media-btn:hover i {
+    transform: scale(1.15);
+}
+
+.social-media-btn:hover:nth-child(1) {
+    background: radial-gradient(
+        circle at 30% 107%, #fdf497 0%,
+        #fdf497 5%, #fd5949 45%,
+        #d6249f 60%, #285AEB 90%
+    );
+}
+
+
+.social-media-btn:hover:nth-child(2) {
+    background-color: var(--white);
+    color: rgba(15, 20, 25, 1);
+
+}
+
+.social-media-btn:hover:nth-child(3) {
+    background-color: var(--white);
+    color: var(--linkedIn);
+}
+
