@@ -1,0 +1,13 @@
+div {
+    background-color: black;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    background-image: url("./castle.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
