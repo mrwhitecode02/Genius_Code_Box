@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Design One</title>
+    <link rel="stylesheet" href="loginDesign.css" />
+  </head>
+  <body>
+    <form action="" class="my-form">
+      <div class="login-welcome-row">
+        <a
+          href="https://github.com/mrwhitecode02?tab=repositories"
+          title="logo"
+        >
+          <img src=".//logos/caja-del-paquete.png" alt="logo" class="logo" />
+        </a>
+        <h1 class="welcome-message">Welcome Back &#x1F44F;</h1>
+        <p>Please enter your details</p>
+      </div>
+      <div class="input-wrapper">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="input-field"
+          placeholder="Your Email"
+          required
+          aria-autocomplete="off"
+        />
+        <label for="email" class="input-label"> Email: </label>
+      </div>
+      <div class="input-wrapper">
+        <input
+          type="password"
+          id="password"
+          class="input-field"
+          placeholder="Your Password"
+          title="Minimun 6 characters at least 1 
+            Aphabet and 1 Number"
+          pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+          required
+          autocomplete="off"
+        />
+        <label for="password" class="input-label"> Password </label>
+      </div>
+      <button type="submit" class="my-form-btn">Login</button>
+      <div class="socials-row">
+        <a href="https://www.google.co.cr/?hl=es" title="Use Google">
+          <img src="./logos/google.png" alt="Google logo" />
+          Log in with Google
+        </a>
+      </div>
+      <div class="my-form-actions">
+        <div class="my-form-row">
+          <span> Don't have an account? </span>
+          <a href="#" title="Create Account"> Sign Up </a>
+        </div>
+      </div>
+    </form>
+
+    <script src="loginDesign.js"></script>
+  </body>
+</html>
